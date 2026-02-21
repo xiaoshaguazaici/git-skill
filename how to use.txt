@@ -44,18 +44,59 @@ git reflog
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
+一下步骤为：上传到github来托管代码，方便不同电脑的查看
+
+00 
+github创建一个仓库
+
+01
+cd ~/.ssh
+检查生成文件没有
+ls
+检查是否又两个文件
+
+02
+ ssh-keygen -t rsa -C “17531166471@163.com”
+
+生成一下密钥
+
+注意：会让你输入三次内容第一次是地址，/g/06_others/myssh/id_rsa
+
+点击回车是保存到默认路径
+二是密码
+三是确认一次密码
+
+注意：：：：：：：：：：：：：
+rm -rf /e/candence23/Spb_data/.ssh/
+可以删除地址下的密钥
+
+
+03
+打开pub文件，复制到setting的ssh的新建ssh的下面，名字自己起一个
+
+04 
+git remote add origin git@github.com:xiaoshaguazaici/git-skill.git
+关联github网站https上的ssh
+
+05
+git push -u origin master
+上传到网站上
+或者
+git push -u origin master -f
+
+可以推送给 main
+
+git remote -v
+出现问题通过这个查看地址是否正确
 
 
 
-
-
-
-
-
-
-
-
-
-
+ssh出现问题的话
+先看ssh的 id_rsa生成在哪里，然后添加ssh
+eval "$(ssh-agent -s)"
+ssh-add "/g/06_others/myssh/id_rsa"
+ssh -T git@github.com
+cd "/g/06_others/git_knowledge"
+git push -u origin master
 
 
