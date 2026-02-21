@@ -101,4 +101,4 @@ git push -u origin master
 
 
 添加默认ssh位置
-export SSH_HOME="/g/06_others/myssh"
+export GIT_SSH_COMMAND="ssh -i /g/06_others/myssh/id_rsa"
