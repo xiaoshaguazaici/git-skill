@@ -79,6 +79,12 @@ git remote add origin git@github.com:xiaoshaguazaici/git-skill.git
 关联github网站https上的ssh
 
 05
+推不上去就添加
+
+这个
+eval "$(ssh-agent -s)"
+ssh-add ../myssh/id_rsa
+
 git push -u origin master
 上传到网站上
 或者
