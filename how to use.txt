@@ -78,6 +78,9 @@ rm -rf /e/candence23/Spb_data/.ssh/
 git remote add origin git@github.com:xiaoshaguazaici/git-skill.git
 关联github网站https上的ssh
 
+注意：如果关联错了可以用
+git remote remove origin 删除关联
+
 05
 推不上去就添加
 
